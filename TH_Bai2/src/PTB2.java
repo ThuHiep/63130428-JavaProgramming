@@ -135,10 +135,7 @@ public class PTB2 {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				textField.setText("");
-				textField_1.setText("");
-				textField_2.setText("");
-				textField_3.setText("");
+				xoatrang();
 				
 			}
 		});
@@ -166,25 +163,34 @@ public class PTB2 {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				double a = Double.parseDouble(textField.getText());
-				double b = Double.parseDouble(textField_1.getText());
-				double c = Double.parseDouble(textField_2.getText());
-				double del = b*b - 4*a*c;
-				if(del>0) {
-					double x1 = (Math.sqrt(del))/(2*a);
-					double x2 = (Math.sqrt(del))/(2*a);
-					textField_3.setText("x1 = " + x1 + " và x2 = " +x2);
-				}else if (del ==0) {
-					double x= -b/2*a;
-					textField_3.setText("x = "+x);
-					
-				}else {
-					textField_3.setText("Phương trình không có nghiệm");
-				}
+				Giai();
 			}
 		});
 		btnGii.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnGii.setBounds(156, 21, 116, 37);
 		panel_2.add(btnGii);
+	}
+	void xoatrang() {
+		textField.setText("");
+		textField_1.setText("");
+		textField_2.setText("");
+		textField_3.setText("");
+	}
+	void Giai() {
+		double a = Double.parseDouble(textField.getText());
+		double b = Double.parseDouble(textField_1.getText());
+		double c = Double.parseDouble(textField_2.getText());
+		double del = b*b - 4*a*c;
+		if(del>0) {
+			double x1 = (Math.sqrt(del))/(2*a);
+			double x2 = (Math.sqrt(del))/(2*a);
+			textField_3.setText("x1 = " + x1 + " và x2 = " +x2);
+		}else if (del ==0) {
+			double x= -b/2*a;
+			textField_3.setText("x = "+x);
+			
+		}else {
+			textField_3.setText("Phương trình không có nghiệm");
+		}
 	}
 }

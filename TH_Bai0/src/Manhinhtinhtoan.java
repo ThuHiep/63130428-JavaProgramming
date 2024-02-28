@@ -57,6 +57,7 @@ public class Manhinhtinhtoan extends JFrame {
 				// TODO Auto-generated method stub
 				Hamxulycong();
 				
+				
 			}
 		});
 		btncong.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -126,6 +127,8 @@ public class Manhinhtinhtoan extends JFrame {
 		
 		
 	}
+
+
 	void Hamxulytru() {
 		
 	}
