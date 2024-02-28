@@ -130,12 +130,33 @@ public class Manhinhtinhtoan extends JFrame {
 
 
 	void Hamxulytru() {
+		String str_soA = txtA.getText();
+		String str_soB = txtB.getText();
+		Double soA = Double.parseDouble(str_soA);
+		Double soB = Double.parseDouble(str_soB);
+		double tong = soA - soB;
+		txtKQA.setText(String.valueOf(tong));
+		
 		
 	}
 	void Hamxulynhan() {
+		String str_soA = txtA.getText();
+		String str_soB = txtB.getText();
+		Double soA = Double.parseDouble(str_soA);
+		Double soB = Double.parseDouble(str_soB);
+		double tong = soA * soB;
+		txtKQA.setText(String.valueOf(tong));
+		
 		
 	}
 	void Hamxulychia() {
+		String str_soA = txtA.getText();
+		String str_soB = txtB.getText();
+		Double soA = Double.parseDouble(str_soA);
+		Double soB = Double.parseDouble(str_soB);
+		double tong = soA / soB;
+		txtKQA.setText(String.valueOf(tong));
+		
 		
 	}
 }
