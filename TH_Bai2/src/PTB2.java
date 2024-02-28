@@ -86,28 +86,28 @@ public class PTB2 {
 		panel.add(lblNewLabel_1_2);
 		
 		textField = new JTextField();
-		textField.setBounds(351, 29, 192, 31);
+		textField.setBounds(351, 29, 337, 31);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(351, 82, 192, 31);
+		textField_1.setBounds(351, 82, 337, 31);
 		panel.add(textField_1);
 		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
-		textField_2.setBounds(351, 129, 192, 31);
+		textField_2.setBounds(351, 129, 337, 31);
 		panel.add(textField_2);
 		
 		JLabel lblNewLabel_2 = new JLabel("Kết quả");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_2.setBounds(313, 170, 99, 25);
+		lblNewLabel_2.setBounds(189, 190, 99, 25);
 		panel.add(lblNewLabel_2);
 		
 		textField_3 = new JTextField();
 		textField_3.setForeground(new Color(0, 0, 0));
-		textField_3.setBounds(206, 207, 337, 30);
+		textField_3.setBounds(351, 191, 337, 30);
 		textField_3.setBorder(new LineBorder(new Color(176, 224, 230)));
 		panel.add(textField_3);
 		textField_3.setColumns(10);
