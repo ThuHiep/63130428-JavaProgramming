@@ -32,7 +32,6 @@ public class chuongtrinhchinh extends JFrame {
 	private JTextField textField;
 	private JCheckBox checkbox;
 	private JList list;
-	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -99,7 +98,7 @@ public class chuongtrinhchinh extends JFrame {
 			}
 		});
 		btnNewButton_2_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_2_1.setBounds(10, 98, 238, 31);
+		btnNewButton_2_1.setBounds(10, 134, 238, 31);
 		panel_1.add(btnNewButton_2_1);
 		
 		JButton btnNewButton_2_3 = new JButton("Bỏ tô đen");
@@ -109,14 +108,28 @@ public class chuongtrinhchinh extends JFrame {
 			}
 		});
 		btnNewButton_2_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_2_3.setBounds(10, 133, 131, 31);
+		btnNewButton_2_3.setBounds(10, 185, 131, 31);
 		panel_1.add(btnNewButton_2_3);
 		
-		JButton btnNewButton_2_4 = new JButton("Xóa các giá trị đang tô đen");
-		btnNewButton_2_4.addActionListener(new ActionListener() {
+		JButton btnNewButton_2_2 = new JButton("Tô đen số lẻ");
+		btnNewButton_2_2.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				todensole();
+			}
+		});
+		btnNewButton_2_2.setBounds(10, 81, 151, 31);
+		panel_1.add(btnNewButton_2_2);
+		btnNewButton_2_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		
+		JButton btnxoa = new JButton("Xóa các giá trị tô đen");
+		btnxoa.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
 				// TODO Auto-generated method stub
 				DefaultListModel<Integer> model = (DefaultListModel<Integer>) list.getModel();
 		        int size = model.getSize();
@@ -128,46 +141,9 @@ public class chuongtrinhchinh extends JFrame {
 				
 			}
 		});
-		btnNewButton_2_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_2_4.setBounds(10, 168, 266, 31);
-		panel_1.add(btnNewButton_2_4);
-		
-		JButton btnNewButton_2_5 = new JButton("Tổng giá trị trong JList");
-		btnNewButton_2_4.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				DefaultListModel<Integer> model = (DefaultListModel<Integer>) list.getModel();
-			    int sum = 0;
-			    for (int i = 0; i < model.size(); i++) {
-			        sum += model.getElementAt(i);
-			    }
-			    textField_1.setText(""+sum);
-				
-			}
-		});
-		btnNewButton_2_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnNewButton_2_5.setBounds(10, 203, 230, 31);
-		panel_1.add(btnNewButton_2_5);
-		
-		JButton btnNewButton_2_2 = new JButton("Tô đen số lẻ");
-		btnNewButton_2_2.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				todensole();
-			}
-		});
-		btnNewButton_2_2.setBounds(10, 62, 151, 31);
-		panel_1.add(btnNewButton_2_2);
-		btnNewButton_2_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		
-		textField_1 = new JTextField();
-		textField_1.setBounds(74, 244, 131, 31);
-		panel_1.add(textField_1);
-		textField_1.setColumns(10);
+		btnxoa.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnxoa.setBounds(10, 240, 230, 31);
+		panel_1.add(btnxoa);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 0, 0), new Color(255, 0, 0)), "Nh\u1EADp th\u00F4ng tin", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
@@ -214,22 +190,14 @@ public class chuongtrinhchinh extends JFrame {
 		checkbox.setBounds(256, 36, 168, 21);
 		panel_2.add(checkbox);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(395, 77, 28, 241);
-		panel_2.add(scrollPane);
 		list = new JList();
 		list.setBackground(new Color(255, 255, 255));
 		DefaultListModel<Integer> model = new DefaultListModel<>();
 		list.setModel(model);
-		
-		list.setBounds(10, 77, 383, 241);
-		
+		list.setBounds(10, 77, 414, 241);
 		panel_2.add(list);
 		
 		
-		
-		JScrollBar scrollBar = new JScrollBar();
-		scrollPane.setViewportView(scrollBar);
 		
 		JPanel panel_1_1 = new JPanel();
 		panel_1_1.setBackground(new Color(192, 192, 192));
@@ -251,6 +219,8 @@ public class chuongtrinhchinh extends JFrame {
 		btnNewButton.setBounds(220, 10, 281, 48);
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 25));
 		panel_1_1.add(btnNewButton);
+		
+        setLocationRelativeTo(null);
 	}
 	public void todensochan(){
 		DefaultListModel<Integer> model = (DefaultListModel<Integer>) list.getModel();
